@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    var do_math_button = document.querySelector("#math").addEventListener("click",function(){
+        //add some numbers. Can you spot the error?
+        var one = 1;
+        var two = "2";
+        var three = 3;
+
+        console.log('The variable one is a '+ typeof(one));
+        console.log('The variable two is a ' + typeof(two));
+        console.log('The variable three is a' + typeof(three));
+
+        var answer = one + two + three;
+
+        console.log(answer);
+
+        var answerSpan = document.querySelector('#answer');
+        answerSpan.innerHTML = answer
+    })
+
+
+
+
+
+</script>
+</body>
+</html>

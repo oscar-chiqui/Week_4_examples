@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="mouse-me">Move the mouse over this message</p>
+    
+
+<script>
+    //Select the #mouse-me paragraph
+    let message = document.querySelector('#mouse-me')
+
+    let countMouse = 0 // create a variable to count the number of mouseover events
+
+    //add a mouseover event listener to change the message when 
+    // the mouse cursor moves over the paragraph
+    message.addEventListener('mouseover', function(){
+        countMouse = countMouse + 1
+        message.innerHTML = 'Your mouse has been on this message ' + countMouse + ' times.'
+    })
+
+    //Add a mouseover event listener to change to a different message
+    //When the mouse cursor leaves
+    message.addEventListener('mouseout',function(){
+        message.innerHTML = 'Your mouse is NOT on this message'
+    })
+
+
+</script>
+</body>
+</html>
